@@ -1,0 +1,407 @@
+.header {
+   
+    display: flex;
+    justify-content:space-between;
+
+
+    &__container {
+
+        background-color:$primary-bck;
+        flex-grow: 1;
+
+        &--title {
+          
+            padding:5rem 2rem 5rem 6rem ;
+            display: flex;
+            justify-content: space-between;
+            
+            
+            &-span {
+
+                position: absolute;
+                width: 10%;
+                color: $primary-txt;
+                font-size:2.5rem;
+                font-weight: 700;
+                font-family: $title-font;
+                line-height: 2.3rem;
+
+            }
+
+            &-btn {
+
+                display: none;
+                position: fixed;
+                top: 2rem;
+                right: 3rem;
+                z-index: 999;
+
+                @include respond(tab-port) {
+            
+                    display: block;
+                }
+            }
+
+        }
+
+        &--main {
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &--nav {
+
+            padding: 3rem 6rem 14rem 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all;
+
+            @include respond(tab-port) {
+
+               width: 0;
+               display: none;
+
+            }
+
+            &-list {
+
+              list-style: none;
+
+            }
+
+            &-item {
+
+               padding: .8rem 0;
+               
+            }
+
+            &-link:link,
+              &-link:visited {
+
+                font-size: 1.4rem;
+                color: $nav-text;
+                font-family: $content-font;
+                font-weight: 500;
+                text-decoration: none;
+
+            }
+
+            &-link:hover {
+
+                color: $primary-txt;
+
+            }
+
+            &-link, .active {
+
+                color: $primary-txt;
+            }
+        }
+
+        &--content {
+
+            padding: 11rem 4rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            @include respond(tab-port) {
+
+                padding: 11rem 6rem;
+
+            }
+
+            @include respond(phone) {
+
+                padding: 10rem 1rem 10rem 3.5rem;
+
+            }
+
+            &-border {
+
+                display: flex;
+                margin: 4rem 11rem 0 0;
+
+                @include respond(tab-land) {
+
+                    margin: 6rem 2rem 0 0;
+
+                }
+
+                &-left {
+
+                    height: 2px;
+                    background-color: $primary-txt;
+                    width: 50%;
+                    
+                }
+
+                &-right {
+
+                    height: 2px;
+                    background-color: $light-gray;
+                    width: 50%;
+                   
+                }
+            }
+
+            &-first {
+                
+                &-head {
+
+                    color: $primary-txt;
+                    display: flex;
+                    justify-content: center;
+                    width: 32.7rem;
+                    position: relative;
+                    font-size: 1.5rem;
+                    font-family: $content-font;
+
+                    @include respond(tab-port) {
+
+                        width: 30rem;
+
+                    }
+                    
+                    &-no {
+
+                       position: absolute;
+                       left: 0;
+                       font-size: 1.3rem;
+                        
+                    }
+
+                    &-date {
+
+                      font-weight: 700;
+
+                    }
+
+                    &-name {
+
+                       padding: 0 .5rem;
+
+                    }
+                }
+
+                &-title {
+
+                    font-family: $head-font;
+                    letter-spacing: -2px;
+                    color: $primary-txt;
+                    font-size: 4rem;
+                    padding: 2rem 1rem 1rem 7.5rem;
+                    font-weight: 1000;   
+
+                    @include respond(tab-port) {
+
+                        padding: 4rem 1rem 4rem 7.5rem;
+                        font-size: 3.5rem;
+
+                    }
+
+                    @include respond(tab-port) {
+
+                        padding: 4rem 1rem 4rem 6rem;
+                        font-size: 3rem;
+
+                    }
+                }
+
+                &-btn {
+
+                    display: flex;
+                    transition: all .2s;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: none; 
+                    background-color: $color-white; 
+                    padding: 1.5rem 2rem 1.5rem 2rem;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    margin: 2rem 0 0 7.6rem;
+                    animation-fill-mode: backwards;
+                    width: 24rem;
+                
+
+                    @include respond(phone) {
+
+                        margin: 2rem 0 0 6rem;
+
+                    }
+                    
+
+                    &-txt {
+
+                        color: $primary-txt;
+                        font-family: $content-font;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        flex-basis: 70%;
+
+                        @include respond(phone) {
+
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            margin-right: 9rem;
+
+                        }
+                       
+                    }
+
+                }
+
+                &-btn:hover {
+
+                    transform: translateY(-3px);
+                    box-shadow: 0 1rem 2rem rgba($color-black,.2); 
+                    
+               }
+
+            }
+
+            &-second {
+
+                margin: 0;
+                display: flex;
+                padding: 2.5rem 0;
+               
+                &-no {
+
+                   margin-right: 6rem;
+                   color: $primary-txt;
+                   font-size: 1.3rem;
+
+                   @include respond(phone) {
+          
+                       margin-right: 3rem;
+
+                   }
+
+                }
+
+                &-img {
+
+                   width: 8rem;
+                   height: 8rem;
+                   margin-right: 2.5rem;
+
+                }
+
+                &-txt {
+
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+                &-name {
+
+                    color: $primary-txt;
+                    font-size: 1.3rem;
+
+                }
+
+                &-h3 {
+
+                    color: $primary-txt;
+                    font-size: 2rem;
+                    font-family: $content-font;
+
+                    @include respond(phone) {
+          
+                        font-size: 1.85rem;
+
+                    }
+                }
+            }
+
+            &-third {
+
+                    margin: 0 11rem 0 0;
+                    display: flex;
+                    padding: 2.5rem 0;
+                    border-top: $light-gray 2px solid;
+
+                    @include respond(tab-land) {
+            
+                        margin: 0 2rem 0 0;
+
+                    }
+                
+
+                &-no {
+
+                       margin-right: 6rem;
+                       color: $primary-txt;
+                       font-size: 1.3rem;
+
+                       @include respond(phone) {
+          
+                           margin-right: 3rem;
+
+                       }
+                   }
+                
+                &-img {
+
+                        width: 8rem;
+                        height: 8rem;
+                        margin-right: 2.5rem;
+
+                 }
+ 
+                 &-txt {
+
+                        display: flex;
+                        flex-direction: column;
+
+                 }
+ 
+                 &-name {
+
+                        color: $primary-txt;
+                        font-size: 1.3rem;
+
+                 }
+ 
+                 &-h3 {
+
+                        color: $primary-txt;
+                        font-size: 2rem;
+                        font-family: $content-font;
+
+                        @include respond(phone) {
+            
+                            font-size: 1.85rem;
+
+                        }
+                 }
+            }
+        }
+    }
+
+    &__photo {
+
+            @include respond(tab-port) {
+            
+            width: 0;
+            }
+
+        &--img {
+
+            height: 75rem;
+
+            @include respond(tab-port) {
+
+                display: none;
+
+            }
+          
+        }
+    }
+}

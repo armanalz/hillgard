@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+/*
+*
+   COLORS
+*
+*/
+/*
+*
+   FONTS
+*
+*/
+.icon-reply {
+  transform: rotate(270deg);
+  width: 3.2rem;
+  height: 2.4rem;
+  padding: 0 0 0 .8rem;
+  border-left: #cccccc 1px solid;
+  fill: #4c366b; }
+
+.icon-arrow-right2 {
+  height: 1.6rem;
+  width: 2rem;
+  display: block;
+  fill: #4c366b; }
+
+.header {
+  display: flex;
+  justify-content: space-between; }
+  .header__container {
+    background-color: #ebe7ef;
+    flex-grow: 1; }
+    .header__container--title {
+      padding: 5rem 2rem 5rem 6rem;
+      display: flex;
+      justify-content: space-between; }
+      .header__container--title-span {
+        position: absolute;
+        width: 10%;
+        color: #4c366b;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: "Volkhov", serif;
+        line-height: 2.3rem; }
+      .header__container--title-btn {
+        display: none;
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        z-index: 999; }
+        @media only screen and (max-width: 56.25em) {
+          .header__container--title-btn {
+            display: block; } }
+    .header__container--main {
+      display: flex;
+      justify-content: space-between; }
+    .header__container--nav {
+      padding: 3rem 6rem 14rem 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all; }
+      @media only screen and (max-width: 56.25em) {
+        .header__container--nav {
+          width: 0;
+          display: none; } }
+      .header__container--nav-list {
+        list-style: none; }
+      .header__container--nav-item {
+        padding: .8rem 0; }
+      .header__container--nav-link:link, .header__container--nav-link:visited {
+        font-size: 1.4rem;
+        color: #888;
+        font-family: "Signika", sans-serif;
+        font-weight: 500;
+        text-decoration: none; }
+      .header__container--nav-link:hover {
+        color: #4c366b; }
+      .header__container--nav-link, .header__container--nav .active {
+        color: #4c366b; }
+    .header__container--content {
+      padding: 11rem 4rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      @media only screen and (max-width: 56.25em) {
+        .header__container--content {
+          padding: 11rem 6rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__container--content {
+          padding: 10rem 1rem 10rem 3.5rem; } }
+      .header__container--content-border {
+        display: flex;
+        margin: 4rem 11rem 0 0; }
+        @media only screen and (max-width: 75em) {
+          .header__container--content-border {
+            margin: 6rem 2rem 0 0; } }
+        .header__container--content-border-left {
+          height: 2px;
+          background-color: #4c366b;
+          width: 50%; }
+        .header__container--content-border-right {
+          height: 2px;
+          background-color: #cccccc;
+          width: 50%; }
+      .header__container--content-first-head {
+        color: #4c366b;
+        display: flex;
+        justify-content: center;
+        width: 32.7rem;
+        position: relative;
+        font-size: 1.5rem;
+        font-family: "Signika", sans-serif; }
+        @media only screen and (max-width: 56.25em) {
+          .header__container--content-first-head {
+            width: 30rem; } }
+        .header__container--content-first-head-no {
+          position: absolute;
+          left: 0;
+          font-size: 1.3rem; }
+        .header__container--content-first-head-date {
+          font-weight: 700; }
+        .header__container--content-first-head-name {
+          padding: 0 .5rem; }
+      .header__container--content-first-title {
+        font-family: "Merriweather Sans", sans-serif;
+        letter-spacing: -2px;
+        color: #4c366b;
+        font-size: 4rem;
+        padding: 2rem 1rem 1rem 7.5rem;
+        font-weight: 1000; }
+        @media only screen and (max-width: 56.25em) {
+          .header__container--content-first-title {
+            padding: 4rem 1rem 4rem 7.5rem;
+            font-size: 3.5rem; } }
+        @media only screen and (max-width: 56.25em) {
+          .header__container--content-first-title {
+            padding: 4rem 1rem 4rem 6rem;
+            font-size: 3rem; } }
+      .header__container--content-first-btn {
+        display: flex;
+        transition: all .2s;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        background-color: #fefefe;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+        cursor: pointer;
+        border-radius: 2px;
+        margin: 2rem 0 0 7.6rem;
+        animation-fill-mode: backwards;
+        width: 24rem; }
+        @media only screen and (max-width: 37.5em) {
+          .header__container--content-first-btn {
+            margin: 2rem 0 0 6rem; } }
+        .header__container--content-first-btn-txt {
+          color: #4c366b;
+          font-family: "Signika", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 700;
+          flex-basis: 70%; }
+          @media only screen and (max-width: 37.5em) {
+            .header__container--content-first-btn-txt {
+              font-size: 1.4rem;
+              font-weight: 600;
+              margin-right: 9rem; } }
+      .header__container--content-first-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+      .header__container--content-second {
+        margin: 0;
+        display: flex;
+        padding: 2.5rem 0; }
+        .header__container--content-second-no {
+          margin-right: 6rem;
+          color: #4c366b;
+          font-size: 1.3rem; }
+          @media only screen and (max-width: 37.5em) {
+            .header__container--content-second-no {
+              margin-right: 3rem; } }
+        .header__container--content-second-img {
+          width: 8rem;
+          height: 8rem;
+          margin-right: 2.5rem; }
+        .header__container--content-second-txt {
+          display: flex;
+          flex-direction: column; }
+        .header__container--content-second-name {
+          color: #4c366b;
+          font-size: 1.3rem; }
+        .header__container--content-second-h3 {
+          color: #4c366b;
+          font-size: 2rem;
+          font-family: "Signika", sans-serif; }
+          @media only screen and (max-width: 37.5em) {
+            .header__container--content-second-h3 {
+              font-size: 1.85rem; } }
+      .header__container--content-third {
+        margin: 0 11rem 0 0;
+        display: flex;
+        padding: 2.5rem 0;
+        border-top: #cccccc 2px solid; }
+        @media only screen and (max-width: 75em) {
+          .header__container--content-third {
+            margin: 0 2rem 0 0; } }
+        .header__container--content-third-no {
+          margin-right: 6rem;
+          color: #4c366b;
+          font-size: 1.3rem; }
+          @media only screen and (max-width: 37.5em) {
+            .header__container--content-third-no {
+              margin-right: 3rem; } }
+        .header__container--content-third-img {
+          width: 8rem;
+          height: 8rem;
+          margin-right: 2.5rem; }
+        .header__container--content-third-txt {
+          display: flex;
+          flex-direction: column; }
+        .header__container--content-third-name {
+          color: #4c366b;
+          font-size: 1.3rem; }
+        .header__container--content-third-h3 {
+          color: #4c366b;
+          font-size: 2rem;
+          font-family: "Signika", sans-serif; }
+          @media only screen and (max-width: 37.5em) {
+            .header__container--content-third-h3 {
+              font-size: 1.85rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .header__photo {
+      width: 0; } }
+  .header__photo--img {
+    height: 75rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__photo--img {
+        display: none; } }
+
+/*# sourceMappingURL=style.css.map */
