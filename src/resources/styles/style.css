@@ -248,4 +248,80 @@ html {
       .header__photo--img {
         display: none; } }
 
+.section-news {
+  display: flex;
+  flex-direction: column; }
+  .section-news__number {
+    display: flex;
+    margin: 11rem auto 1rem 22rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-news__number {
+        margin: 11rem auto 1rem 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .section-news__number {
+        margin: 8rem auto 1rem 5rem; } }
+    .section-news__number-no {
+      color: #4c366b;
+      font-size: 1.3rem; }
+    .section-news__number-line {
+      width: 4.1rem;
+      height: 1px;
+      background-color: #dddddd;
+      margin: .8rem .8rem 0 .8rem; }
+    .section-news__number-new {
+      font-family: "Signika", sans-serif;
+      color: #4c366b;
+      font-size: 1.3rem; }
+  .section-news__title {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 800;
+    font-size: 3.2rem;
+    letter-spacing: -4px;
+    color: #4c366b;
+    margin: 1rem auto 5rem 22rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-news__title {
+        margin: 1rem auto 4rem 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .section-news__title {
+        margin: 1rem auto 6rem 5rem;
+        font-size: 2.8rem; } }
+  .section-news__content {
+    overflow: hidden;
+    padding-bottom: 10rem; }
+    .section-news__content-wrapper {
+      padding: 4rem 4.9rem 1rem 4.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      border-left: #dddddd 1px solid;
+      align-items: center;
+      min-height: 56rem; }
+      @media only screen and (max-width: 75em) {
+        .section-news__content-wrapper {
+          padding: 4rem 3.2rem 1rem 3.2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-news__content-wrapper {
+          padding: 4rem 3rem 1rem 3rem; } }
+      .section-news__content-wrapper-bild {
+        height: 30rem;
+        margin: 0 auto; }
+      .section-news__content-wrapper-autor {
+        display: flex;
+        margin: 2.5rem 0 2.2rem 0; }
+        .section-news__content-wrapper-autor-date {
+          color: #7c649e;
+          font-size: 1.4rem;
+          font-weight: 700;
+          font-family: "Signika", sans-serif; }
+        .section-news__content-wrapper-autor-name {
+          color: #7c649e;
+          font-size: 1.3rem; }
+      .section-news__content-wrapper-title {
+        font-family: "Merriweather Sans", sans-serif;
+        font-size: 1.8rem;
+        color: #4c366b;
+        letter-spacing: -2px; }
+
 /*# sourceMappingURL=style.css.map */

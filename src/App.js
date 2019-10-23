@@ -1,11 +1,18 @@
 import React from 'react';
 import './resources/styles/style.css';
 import Header from './components/Header';
+import News from './components/News';
 
 
 function App() {
   return (
-    <Header/>
+    <div>
+
+        <Header/>
+        <News/>
+
+        
+      </div>
   );
 }
 
