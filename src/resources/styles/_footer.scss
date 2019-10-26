@@ -1,0 +1,159 @@
+.footer {
+
+    background-color: $footer-bck;
+    margin-top: -6rem;
+
+    &__container {
+
+        display: flex;
+        justify-content: space-between;
+
+
+        @include respond(tab-port) {
+             
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        &--title {
+          
+            padding:16rem 15rem 5rem 15rem ;
+
+            @include respond(tab-port) {
+             
+                padding:16rem 0 5rem 0 ;
+            }
+            
+            
+            &-span {
+
+                color: $color-white;
+                font-size:2.5rem;
+                font-weight: 700;
+                font-family: $title-font;
+                line-height: 2.3rem;
+  
+            }
+
+          }
+
+          &--nav {
+
+            padding:16rem 15rem 5rem 15rem ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all;
+
+            @include respond(tab-port) {
+             
+                padding:0 0 5rem 0 ;
+                display: flex;
+                flex-direction: row;
+
+            }
+
+            &-list {
+
+              list-style: none;
+
+              @include respond(tab-port) {
+             
+                display: flex;
+                flex-direction: row;
+
+              }
+
+            }
+
+            &-item {
+
+               padding: .8rem 0;
+
+               @include respond(tab-port) {
+
+                  padding: .8rem;
+
+               }
+               
+            }
+
+            &-link:link,
+              &-link:visited {
+
+                font-size: 1.4rem;
+                color: $nav-text;
+                font-family: $content-font;
+                font-weight: 800;
+                text-decoration: none;
+
+            }
+
+            &-link:hover {
+
+                color: $color-white;
+            }
+
+            &-link:active {
+
+                color: $primary-txt;
+            }
+        }
+
+        
+    }
+
+    &__social {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 15rem 7rem 15rem;
+
+        @include respond(tab-port) {
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+            padding: 0 0 5rem 0;
+
+        }
+
+        &-license {
+
+            &-txt {
+                
+                font-family: $content-font;
+                font-size: 1.2rem;
+                color: $nav-text;
+
+            }
+        }
+
+        &-nav {
+
+            display: flex;
+
+            @include respond(tab-port) {
+
+                margin-bottom: 4rem;
+
+            }
+
+            &-list {
+
+              list-style: none;
+              display: flex;           
+
+            }
+
+            &-item:not(:nth-child(1)) {
+
+                    margin-left: 1rem;
+
+            }
+            
+        }
+    }
+}

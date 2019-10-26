@@ -6,6 +6,7 @@
     padding: 0 0 0 .8rem;
     border-left: $light-gray 1px solid;
     fill: $primary-txt;
+
 }
 
 .icon-arrow-right2 {
@@ -14,4 +15,22 @@
       width: 2rem;
       display: block;
       fill: $primary-txt;
+      
+}
+
+#footer_icon {
+
+        width: 2.3rem;
+        height: 2.3rem;
+        padding: .5rem;
+        border-radius: 5px;
+        fill: $nav-text;
+        cursor: pointer;
+
+}
+
+#footer_icon:hover {
+
+    fill: $color-white;
+
 }
