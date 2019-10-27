@@ -1,8 +1,47 @@
 import React, { Component } from 'react';
 import Icon from './utilities/Icon';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+import SideDrawer from './utilities/SideDrawer';
 
 
 class Header extends Component {
+
+    state = {
+        
+        drawerOpen:false,
+        bckShow:false 
+    }
+
+    componentDidMount() {
+
+        window.addEventListener('scroll',this.handlerScroll);
+
+    }
+
+    handlerScroll = () => {
+
+        if (window.scrollY > 50) {
+
+             this.setState({
+                 bckShow:true
+             })
+
+        } else {
+
+             this.setState({
+                 bckShow:false
+             })
+        }
+     }
+
+    toggleDrawer = (value) => {
+
+        this.setState({
+            drawerOpen:value
+        })
+
+    }
 
     render() {
 
@@ -12,14 +51,26 @@ class Header extends Component {
             <div className="header__container">
 
                <div className="header__container--title">
-                 <h4>
-                   <span className="header__container--title-span">
-                       The Hilgart
-                   </span>
-                 </h4>
-                 <div className="header__container--title-btn">
-                        
-                 </div>
+                    <h4>
+                        <span className="header__container--title-span">
+                            The Hilgart
+                        </span>
+                    </h4>
+                    <div className="header__container--title-btn">
+
+                        <IconButton area-label="Menu" color="inherit" 
+                                    id={this.state.bckShow ? "bg-show" : "transparent"}
+                                    onClick={()=>this.toggleDrawer(true)} 
+                        >
+                                <MenuIcon id="btn"
+                                className={this.state.bckShow ? "btn-scroll" : "btn-top"}/>
+                        </IconButton>
+                            
+                    </div>
+                    <SideDrawer
+                                open={this.state.drawerOpen}
+                                onClose={(value)=> this.toggleDrawer(value)}
+                    />
                </div>
 
                <div className="header__container--main">
@@ -28,22 +79,30 @@ class Header extends Component {
 
                         <ul className="header__container--nav-list">
                             <li className="header__container--nav-item">
-                                <a href="http://localhost:3000/" className="header__container--nav-link">
+                                <a href="http://localhost:3000/" 
+                                   className="header__container--nav-link"
+                                >
                                     About
                                 </a>
                             </li>
                             <li className="header__container--nav-item">
-                                <a href="http://localhost:3000/" className="header__container--nav-link">
+                                <a href="http://localhost:3000/" 
+                                   className="header__container--nav-link"
+                                >
                                     Services
                                 </a>
                             </li>
                             <li className="header__container--nav-item">
-                                <a href="http://localhost:3000/" className="header__container--nav-link active">
+                                <a href="http://localhost:3000/" 
+                                   className="header__container--nav-link active"
+                                >
                                     Journal
                                 </a>
                             </li>
                             <li className="header__container--nav-item">
-                                <a href="http://localhost:3000/" className="header__container--nav-link">
+                                <a href="http://localhost:3000/" 
+                                   className="header__container--nav-link"
+                                >
                                     Contacts
                                 </a>
                             </li>

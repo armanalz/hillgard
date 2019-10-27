@@ -405,3 +405,40 @@
         }
     }
 }
+#bg-show {
+
+    background: $button-bg;
+}
+
+#transparent {
+
+    background: transparent;
+
+}
+
+#btn {
+
+    height: 2.5rem;
+    width: 2.5rem;
+
+    &.btn-scroll {
+
+        fill: $primary-bck;
+
+    }
+
+    &.btn-top {
+
+        fill: $primary-txt;
+    }
+  
+}
+
+#list-item {
+
+    color: $primary-txt;
+    font-size: 1.4rem;
+    font-family: $content-font;
+    font-weight: "500"
+}
+
