@@ -1,17 +1,17 @@
 .header {
    
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 
 
     &__container {
 
-        background-color:$primary-bck;
+        background-color: $primary-bck;
         flex-grow: 1;
 
         &--title {
           
-            padding:5rem 2rem 5rem 6rem ;
+            padding: 5rem 2rem 5rem 6rem ;
             display: flex;
             justify-content: space-between;
             
@@ -21,7 +21,7 @@
                 position: absolute;
                 width: 10%;
                 color: $primary-txt;
-                font-size:2.5rem;
+                font-size: 2.5rem;
                 font-weight: 700;
                 font-family: $title-font;
                 line-height: 2.3rem;
@@ -68,7 +68,7 @@
 
             &-list {
 
-              list-style: none;
+               list-style: none;
 
             }
 
@@ -260,7 +260,7 @@
                     transform: translateY(-3px);
                     box-shadow: 0 1rem 2rem rgba($color-black,.2); 
                     
-               }
+                }
 
             }
 

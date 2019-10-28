@@ -48,6 +48,7 @@ class Header extends Component {
         return (
 
          <header className="header">
+
             <div className="header__container">
 
                <div className="header__container--title">
@@ -62,8 +63,9 @@ class Header extends Component {
                                     id={this.state.bckShow ? "bg-show" : "transparent"}
                                     onClick={()=>this.toggleDrawer(true)} 
                         >
-                                <MenuIcon id="btn"
-                                className={this.state.bckShow ? "btn-scroll" : "btn-top"}/>
+                            <MenuIcon id="btn"
+                                      className={this.state.bckShow ? "btn-scroll" : "btn-top"}
+                            />
                         </IconButton>
                             
                     </div>
@@ -194,7 +196,7 @@ class Header extends Component {
 
                 </div>       {/* header__container--main */}
           
-            </div>
+            </div> {/* header__container */}
 
             <div className="header__photo">
 
